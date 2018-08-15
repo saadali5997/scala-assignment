@@ -135,7 +135,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	<url>https://github.com/saadali5997/scala-assignment/blob/develop/src/main/scala/com/datumbrain/webfetcher/MainClass.scala</url>
+	<url>https://github.com/saadali5997/scala-assignment</url>
 	<organization>
 		<name>Datum Brain</name>
 		<url>https://www.datumbrain.com/</url>
