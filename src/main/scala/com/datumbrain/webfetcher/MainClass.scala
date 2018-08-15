@@ -1,6 +1,5 @@
 package com.datumbrain.webfetcher
-import org.jsoup.Jsoup._
-import sys.process._
+import org.jsoup.Jsoup.connect
 import Exception._
 import java.io._
 import System._
@@ -16,7 +15,7 @@ object MainClass {
       val urlCleaned = args(0).replaceAll("[^A-Za-z0-9]", "")
       // create folder with name = url(cleaned)
       // get time stamp
-      val timeStamp: String = (System.currentTimeMillis / 1000).toString()
+      val timeStamp: String = (System.currentTimeMillis).toString()
       // generate folderName url(cleaned)+timeStamp
       var folderName = f"$urlCleaned%s $timeStamp%s"
       // the folders doesn't exist initially
