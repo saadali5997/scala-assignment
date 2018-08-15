@@ -4,21 +4,15 @@
   <artifactId>webfetcher</artifactId>
   <version>0.0.1</version>
   <name>${project.artifactId}</name>
-  <description>My wonderfull scala app</description>
+  <description>A webfetcher which fetches the HTML of page and writes it in an html file</description>
   <inceptionYear>2018</inceptionYear>
-  <licenses>
-    <license>
-      <name>My License</name>
-      <url>http://....</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+
 
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <encoding>UTF-8</encoding>
-    <scala.version>2.12.6</scala.version>
+    <scala.version>2.11.11</scala.version>
     <scala.compat.version>2.12</scala.compat.version>
     <spec2.version>4.2.0</spec2.version>
   </properties>
@@ -30,7 +24,6 @@
       <version>${scala.version}</version>
     </dependency>
     <dependency>
-	  <!-- jsoup HTML parser library @ https://jsoup.org/ -->
 	  <groupId>org.jsoup</groupId>
 	  <artifactId>jsoup</artifactId>
 	  <version>1.11.3</version>
@@ -141,4 +134,9 @@
       </plugin>
     </plugins>
   </build>
+  <url>https://github.com/saadali5997/scala-assignment/blob/develop/src/main/scala/com/datumbrain/webfetcher/MainClass.scala</url>
+  <organization>
+  	<name>Datum Brain</name>
+  	<url>https://www.datumbrain.com/</url>
+  </organization>
 </project>
