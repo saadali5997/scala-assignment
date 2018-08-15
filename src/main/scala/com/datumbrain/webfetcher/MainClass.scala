@@ -3,6 +3,8 @@ import org.jsoup.Jsoup
 import sys.process._
 import java.io._
 import System._
+import java.io.File
+
 
 object MainClass {
   
@@ -16,14 +18,12 @@ object MainClass {
     val timeStamp: Long = System.currentTimeMillis / 1000
     // generate folderName url(cleaned)+timeStamp
     var folderName = args(0).replaceAll("[^A-Za-z0-9]","")+timeStamp.toString()
-    // make command
-    var cmd = "mkdir "+ folderName;
-    // execute command
-    cmd.!!
+
+    // the folders doesn't exist initially
+    var dir :File = new File(folderName);
     
-    // create file output.html
-    cmd = "touch " + folderName + "/output.html"
-    cmd.!!
+    // create folder
+    val successful: Boolean = dir.mkdirs()
     
     // writting file output.html
     val pw = new PrintWriter(folderName+"/output.html")
