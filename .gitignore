@@ -3,3 +3,7 @@ src/test/
 .settings/
 .classpath
 .project
+.cache-main
+.cache-tests
+.cache-main/
+.cache-tests/
