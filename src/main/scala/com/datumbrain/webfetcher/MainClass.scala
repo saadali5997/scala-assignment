@@ -11,17 +11,19 @@ object MainClass {
   def main(args: Array[String]) {
 
     // get response from url
-    var response = Jsoup.parse(args(0))
+    var response=""
+    var urlCleaned=""
+    try {
+      response = Jsoup.parse(args(0)).toString()
+      urlCleaned = args(0).replaceAll("[^A-Za-z0-9]", "")
+    } catch {
+      case ioe: java.lang.ArrayIndexOutOfBoundsException => println("URL as argument needed.")
+      case e: Exception                                  => println("Unknown Exception")
+    }
     // create folder with name = url(cleaned)
     // get time stamp
     val timeStamp: String = (System.currentTimeMillis / 1000).toString()
-    var urlCleaned = ""
-    try {
-      urlCleaned = args(0).replaceAll("[^A-Za-z0-9]", "")
-    } catch {
-      case ioe: IndexOutOfBoundsException => println("URL as argument needed.")
-      case e: Exception                   => println(e.printStackTrace())
-    }
+    
     // generate folderName url(cleaned)+timeStamp
     var folderName = f"$urlCleaned%s $timeStamp%s"
     // the folders doesn't exist initially
