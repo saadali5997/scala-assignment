@@ -7,7 +7,7 @@ There are 2 programs to run in this repository.
 
 ### Running Web Fetcher
 1. Pull the repository.
-2. run `mvn package` after opening terminal in directory
+2. run `mvn package` after opening terminal in directory.
    A .jar file will be created in a new folder named target.
 3. run jar file by using
    `java -jar target/jarfilename.jar`
